@@ -15,42 +15,15 @@ use Magento\Wishlist\Helper\Data as WishlistHelper;
 class Data
 {
     /**
-     * @var ModuleHelper
-     */
-    protected $moduleHelper;
-
-    /**
-     * @var Json
-     */
-    protected $json;
-
-    /**
-     * @var RequestInterface
-     */
-    protected $request;
-
-    /**
-     * @var UrlInterface
-     */
-    protected $urlBuilder;
-
-    /**
      * Helper Plugin constructor.
-     * @param ModuleHelper $moduleHelper
-     * @param RequestInterface $request
-     * @param Json $json
-     * @param UrlInterface $urlBuilder
+     * Constructor property promotion used for injected services.
      */
     public function __construct(
-        ModuleHelper $moduleHelper,
-        RequestInterface $request,
-        Json $json,
-        UrlInterface $urlBuilder
+        protected ModuleHelper $moduleHelper,
+        protected RequestInterface $request,
+        protected Json $json,
+        protected UrlInterface $urlBuilder
     ) {
-        $this->moduleHelper = $moduleHelper;
-        $this->json = $json;
-        $this->request = $request;
-        $this->urlBuilder = $urlBuilder;
     }
 
     /**

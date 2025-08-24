@@ -14,34 +14,14 @@ use Magento\Wishlist\Block\Customer\Sharing as MagentoSharingBlock;
 class Sharing
 {
     /**
-     * @var UrlInterface
-     */
-    protected $urlBuilder;
-
-    /**
-     * @var RequestInterface
-     */
-    protected $request;
-
-    /**
-     * @var Data
-     */
-    protected $moduleHelper;
-
-    /**
      * Sharing Block Plugin constructor.
-     * @param RequestInterface $request
-     * @param UrlInterface $urlBuilder
-     * @param Data $moduleHelper
+     * Constructor property promotion used for injected services.
      */
     public function __construct(
-        RequestInterface $request,
-        UrlInterface $urlBuilder,
-        Data $moduleHelper
+        protected RequestInterface $request,
+        protected UrlInterface $urlBuilder,
+        protected Data $moduleHelper
     ) {
-        $this->urlBuilder = $urlBuilder;
-        $this->request = $request;
-        $this->moduleHelper = $moduleHelper;
     }
 
     /**

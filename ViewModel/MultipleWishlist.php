@@ -18,43 +18,16 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
 class MultipleWishlist implements ArgumentInterface
 {
     /**
-     * @var Session
-     */
-    protected $customerSession;
-
-    /**
-     * @var Data
-     */
-    protected $moduleHelper;
-
-    /**
-     * @var RequestInterface
-     */
-    protected $request;
-
-    /**
-     * @var UrlInterface
-     */
-    protected $urlBuilder;
-
-    /**
      * MultipleWishlist constructor.
      *
-     * @param Session $customerSession
-     * @param Data $moduleHelper
-     * @param UrlInterface $urlBuilder
-     * @param RequestInterface $request
+     * Constructor property promotion used for injected services.
      */
     public function __construct(
-        Session $customerSession,
-        Data $moduleHelper,
-        UrlInterface $urlBuilder,
-        RequestInterface $request
+        protected Session $customerSession,
+        protected Data $moduleHelper,
+        protected UrlInterface $urlBuilder,
+        protected RequestInterface $request
     ) {
-        $this->customerSession = $customerSession;
-        $this->moduleHelper = $moduleHelper;
-        $this->request = $request;
-        $this->urlBuilder = $urlBuilder;
     }
 
     /**

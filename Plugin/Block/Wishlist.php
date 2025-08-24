@@ -14,35 +14,14 @@ use Magento\Wishlist\Block\Customer\Wishlist as MagentoWishlistBlock;
 class Wishlist
 {
     /**
-     * @var RequestInterface
-     */
-    protected $request;
-
-    /**
-     * @var Data
-     */
-    protected $moduleHelper;
-
-    /**
-     * @var Json
-     */
-    protected $json;
-
-    /**
      * Wishlist Block Plugin constructor.
-     *
-     * @param RequestInterface $request
-     * @param Data $moduleHelper
-     * @param Json $json
+     * Constructor property promotion used for injected services.
      */
     public function __construct(
-        RequestInterface $request,
-        Data $moduleHelper,
-        Json $json
+        protected RequestInterface $request,
+        protected Data $moduleHelper,
+        protected Json $json
     ) {
-        $this->request = $request;
-        $this->moduleHelper = $moduleHelper;
-        $this->json = $json;
     }
 
     /**

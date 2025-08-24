@@ -22,27 +22,7 @@ class Wishlist extends WishlistCustomerData
     /**
      * @var ModuleHelper
      */
-    protected $moduleHelper;
-
-    /**
-     * @var Data
-     */
     protected $wishlistHelper;
-
-    /**
-     * @var ScopeConfigInterface
-     */
-    protected $scopeConfig;
-
-    /**
-     * @var CollectionFactory
-     */
-    protected $wishlistCollectionFactory;
-
-    /**
-     * @var ItemResolverInterface
-     */
-    protected $itemResolver;
 
     /**
      * Wishlist Customer Data Plugin constructor.
@@ -61,16 +41,12 @@ class Wishlist extends WishlistCustomerData
         Sidebar $block,
         ImageFactory $imageHelperFactory,
         ViewInterface $view,
-        ModuleHelper $moduleHelper,
-        ScopeConfigInterface $scopeConfig,
-        CollectionFactory $wishlistCollectionFactory,
-        ItemResolverInterface $itemResolver
+        protected ModuleHelper $moduleHelper,
+        protected ScopeConfigInterface $scopeConfig,
+        protected CollectionFactory $wishlistCollectionFactory,
+        protected ItemResolverInterface $itemResolver
     ) {
         parent::__construct($wishlistHelper, $block, $imageHelperFactory, $view);
-        $this->moduleHelper = $moduleHelper;
-        $this->scopeConfig = $scopeConfig;
-        $this->wishlistCollectionFactory = $wishlistCollectionFactory;
-        $this->itemResolver = $itemResolver;
     }
 
     /**
