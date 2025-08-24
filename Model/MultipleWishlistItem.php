@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Kamlesh\MultipleWishlist\Model;
 
 use Kamlesh\MultipleWishlist\Api\Data\MultipleWishlistItemInterface;
@@ -11,7 +13,7 @@ use Magento\Framework\Model\AbstractExtensibleModel;
  */
 class MultipleWishlistItem extends AbstractExtensibleModel implements IdentityInterface, MultipleWishlistItemInterface
 {
-    const CACHE_TAG = 'multiple_wishlist_item';
+    public const CACHE_TAG = 'multiple_wishlist_item';
 
     /**
      * @var string

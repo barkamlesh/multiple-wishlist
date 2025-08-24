@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Kamlesh\MultipleWishlist\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
@@ -11,10 +13,10 @@ use Magento\Framework\Api\ExtensibleDataInterface;
  */
 interface MultipleWishlistItemInterface
 {
-    const PRIMARY_ID = 'item_id';
-    const MULTIPLE_WISHLIST_ID = 'multiple_wishlist_id';
-    const MULTIPLE_WISHLIST_ITEM = 'wishlist_item_id';
-    const WISHLIST_ID = 'wishlist_id';
+    public const PRIMARY_ID = 'item_id';
+    public const MULTIPLE_WISHLIST_ID = 'multiple_wishlist_id';
+    public const MULTIPLE_WISHLIST_ITEM = 'wishlist_item_id';
+    public const WISHLIST_ID = 'wishlist_id';
 
     /**
      * Returns multiple wishlist item id

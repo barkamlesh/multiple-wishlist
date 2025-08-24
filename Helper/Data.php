@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Kamlesh\MultipleWishlist\Helper;
@@ -28,11 +29,11 @@ class Data extends AbstractHelper
     /**
      * Helper constants
      */
-    const XML_PATH_ENABLED = 'wishlist/multiple_wishlist_general/enabled';
-    const XML_PATH_STRATEGY = 'wishlist/multiple_wishlist_general/wishlist_strategy';
-    const XML_PATH_LIMIT = 'wishlist/multiple_wishlist_general/wishlist_limit';
-    const DEFAULT_LIMIT = 20;
-    const MAX_LIMIT = 100;
+    public const XML_PATH_ENABLED = 'wishlist/multiple_wishlist_general/enabled';
+    public const XML_PATH_STRATEGY = 'wishlist/multiple_wishlist_general/wishlist_strategy';
+    public const XML_PATH_LIMIT = 'wishlist/multiple_wishlist_general/wishlist_limit';
+    public const DEFAULT_LIMIT = 20;
+    public const MAX_LIMIT = 100;
 
     /**
      * @var MultipleWishlistItemRepositoryInterface

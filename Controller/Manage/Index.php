@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Kamlesh\MultipleWishlist\Controller\Manage;
@@ -39,7 +40,7 @@ class Index extends AbstractIndex implements HttpGetActionInterface
             $this->_forward('noroute');
         }
 
-    /** @var \Magento\Framework\View\Result\Page $resultPage */
+        /** @var \Magento\Framework\View\Result\Page $resultPage */
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         $resultPage->getConfig()->getTitle()->set(__('Manage Wishlists'));
         return $resultPage;
