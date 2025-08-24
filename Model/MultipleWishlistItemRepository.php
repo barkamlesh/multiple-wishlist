@@ -24,33 +24,10 @@ use Kamlesh\MultipleWishlist\Model\MultipleWishlistItemFactory;
 class MultipleWishlistItemRepository implements MultipleWishlistItemRepositoryInterface
 {
     /**
-     * @var MultipleWishlistItemResource
-     */
-    protected $resource;
-
-    /**
-     * @var MultipleWishlistItemFactory
-     */
-    protected $multipleWishlistItemFactory;
-
-    /**
-     * @var MultipleWishlistItemCollection
-     */
-    protected $collectionFactory;
-
-    /**
-     * @var MultipleWishlistItemSearchResultsFactory
-     */
-    protected $searchResultsFactory;
-
-    /**
-     * @var CollectionProcessorInterface
-     */
-    protected $collectionProcessor;
-
-
-    /**
      * MultipleWishlistItemRepository constructor.
+     *
+     * Using constructor property promotion to reduce boilerplate.
+     *
      * @param MultipleWishlistItemSearchResultsFactory $searchResultsFactory
      * @param MultipleWishlistItemFactory $multipleWishlistItemFactory
      * @param MultipleWishlistItemCollection $collectionFactory
@@ -58,17 +35,12 @@ class MultipleWishlistItemRepository implements MultipleWishlistItemRepositoryIn
      * @param CollectionProcessorInterface $collectionProcessor
      */
     public function __construct(
-        MultipleWishlistItemSearchResultsFactory $searchResultsFactory,
-        MultipleWishlistItemFactory $multipleWishlistItemFactory,
-        MultipleWishlistItemCollection $collectionFactory,
-        MultipleWishlistItemResource $resource,
-        CollectionProcessorInterface $collectionProcessor
+        protected MultipleWishlistItemSearchResultsFactory $searchResultsFactory,
+        protected MultipleWishlistItemFactory $multipleWishlistItemFactory,
+        protected MultipleWishlistItemCollection $collectionFactory,
+        protected MultipleWishlistItemResource $resource,
+        protected CollectionProcessorInterface $collectionProcessor
     ) {
-        $this->resource = $resource;
-        $this->multipleWishlistItemFactory = $multipleWishlistItemFactory;
-        $this->collectionFactory = $collectionFactory;
-        $this->searchResultsFactory = $searchResultsFactory;
-        $this->collectionProcessor = $collectionProcessor;
     }
 
     /**
