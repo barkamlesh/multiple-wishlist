@@ -13,6 +13,18 @@
     padding-bottom: 0;
 }
 
+/* extracted from template: note paragraph spacing */
+.multiple-wishlist-modal-popup .multiple-wishlist-note {
+    margin-top: 12px;
+}
+
+/* keep legacy selectors from inline style block */
+.multiplewishlist-modal .modal-header { border-bottom: none; }
+.multiplewishlist-modal .modal-title { padding-bottom: 0; }
+.multiplewishlist-modal .modal-content { padding-top: 0.5rem; }
+.multiple-wishlist-modal-popup .modal-header { border-bottom: none !important; }
+.multiple-wishlist-modal-popup .modal-title { border-bottom: none !important; }
+
 /* ensure the wishlist label and input sizing stay as intended */
 .multiple-wishlist-modal-popup .fieldset-multiple-wishlist .label {
     text-align: left;

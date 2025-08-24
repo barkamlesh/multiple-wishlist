@@ -22,7 +22,7 @@ class Wishlist extends WishlistCustomerData
     /**
      * @var ModuleHelper
      */
-    
+
 
     /**
      * Wishlist Customer Data Plugin constructor.
