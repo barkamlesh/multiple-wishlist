@@ -3,6 +3,10 @@
     "description": "Magento 2 multiple wishlist module",
     "type": "magento2-module",
     "license":"OSL-3.0",
+    "require": {
+        "php": "^8.1",
+        "magento/framework": "^103.0"
+    },
     "authors": [
         {
             "name": "Kamlesh Bar",
