@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Kamlesh\MultipleWishlist\Api\Data\MultipleWishlistInterface" type="Kamlesh\MultipleWishlist\Model\MultipleWishlist" />
+    <preference for="Kamlesh\MultipleWishlist\Api\MultipleWishlistRepositoryInterface" type="Kamlesh\MultipleWishlist\Model\MultipleWishlistRepository" />
+    <preference for="Kamlesh\MultipleWishlist\Api\Data\MultipleWishlistSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    <preference for="Kamlesh\MultipleWishlist\Api\Data\MultipleWishlistItemInterface" type="Kamlesh\MultipleWishlist\Model\MultipleWishlistItem" />
+    <preference for="Kamlesh\MultipleWishlist\Api\MultipleWishlistItemRepositoryInterface" type="Kamlesh\MultipleWishlist\Model\MultipleWishlistItemRepository" />
+    <preference for="Kamlesh\MultipleWishlist\Api\Data\MultipleWishlistItemSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+</config>

@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Kamlesh\MultipleWishlist\ViewModel\MultipleWishlist $viewModel
+ */
+$viewModel = $block->getViewModel();
+?>
+<?php if ($viewModel->isCustomerLoggedIn() && $viewModel->canShowModal()): ?>
+    <div class="multiplewishlist-modal" data-mage-init='{"multipleWishlistModal": {}}'
+         data-bind="scope: 'multiple_wishlists'" data-item="multiple_wishlists">
+        <style>
+            /* Scoped to this modal only */
+            .multiplewishlist-modal .modal-header { border-bottom: none; }
+            .multiplewishlist-modal .modal-title { padding-bottom: 0; }
+            .multiplewishlist-modal .modal-content { padding-top: 0.5rem; }
+            /* When JS marks the generated modal wrapper, ensure header border removed even if global CSS is stronger */
+            .multiple-wishlist-modal-popup .modal-header { border-bottom: none !important; }
+            .multiple-wishlist-modal-popup .modal-title { border-bottom: none !important; }
+        </style>
+        <form id="multiple-wishlist-form" action="#" method="post">
+            <p style="margin-top:12px;"><?= __('If no wishlist is selected, item will be added to the Default Wishlist.'); ?></p>
+            <!-- ko ifnot: hasWishlists() -->
+                <p><?= __('You don\'t have created wishlists.'); ?></p>
+            <!-- /ko -->
+
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        </form>
+    </div>
+
+    <script type="text/x-magento-init">
+        {
+            "[data-item='multiple_wishlists']": {
+                "Magento_Ui/js/core/app": <?= /* @escapeNotVerified */ $block->getJsLayout(); ?>
+            }
+        }
+    </script>
+<?php endif; ?>

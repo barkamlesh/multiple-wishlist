@@ -1,0 +1,11 @@
+<!-- Hidden inputs template for MultipleWishlist modal -->
+<!-- Expects 'data' object with 'data' property containing key/value pairs -->
+<!-- Usage: mageTemplate(hiddenInputsTemplate, { data: postData }) -->
+<!-- Minimal and defensive: only render when data provided -->
+<!-- ko if: data && data.data -->
+    <!-- ko foreach: Object.keys(data.data) -->
+        <!-- ko if: data.data[$data] !== undefined -->
+            <input type="hidden" data-bind="attr: { name: $raw($data), value: data.data[$data] }" class="multiple-wishlist-hidden" />
+        <!-- /ko -->
+    <!-- /ko -->
+<!-- /ko -->

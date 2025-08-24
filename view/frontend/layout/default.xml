@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Kamlesh_MultipleWishlist::css/modal.css" />
+    </head>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block ifconfig="wishlist/multiple_wishlist_general/enabled" name="kamlesh.multiplewishlist.modal" template="Kamlesh_MultipleWishlist::addto/modal.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Kamlesh\MultipleWishlist\ViewModel\MultipleWishlist</argument>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="multiple_wishlists" xsi:type="array">
+                                <item name="component" xsi:type="string">Kamlesh_MultipleWishlist/js/view/multiple-wishlists</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Kamlesh_MultipleWishlist/list</item>
+                                </item>
+
+                                <item name="children" xsi:type="array">
+                                    <item name="create_wishlist" xsi:type="array">
+                                        <item name="component" xsi:type="string">Kamlesh_MultipleWishlist/js/view/create-multiple-wishlist</item>
+                                        <item name="displayArea" xsi:type="string">create_wishlist</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Kamlesh_MultipleWishlist/create</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

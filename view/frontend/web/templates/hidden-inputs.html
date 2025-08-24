@@ -1,0 +1,11 @@
+<% /* Hidden inputs template for MultipleWishlist modal (underscore/mage/template format) */ %>
+<% if (data && data.data) { %>
+    <% for (var key in data.data) { if (Object.prototype.hasOwnProperty.call(data.data, key) && data.data[key] !== undefined) { %>
+        <input type="hidden" name="<%- key %>" value="<%- data.data[key] %>" class="multiple-wishlist-hidden" />
+    <% } } %>
+<% } %>
+<div class="multiple-wishlist-hidden">
+    <% _.each(data.data, function(value, index) { %>
+        <input type="hidden" name="<%- index %>" value="<%- value %>">
+    <% }) %>
+</div>

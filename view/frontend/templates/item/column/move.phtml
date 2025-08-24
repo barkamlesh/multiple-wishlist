@@ -1,0 +1,10 @@
+<?php
+
+
+/* @var \Magento\Wishlist\Block\Customer\Wishlist\Item\Column $block */
+?>
+
+<a href="#" title="<?= $block->escapeHtmlAttr(__('Move')) ?>" data-role="move"
+   data-item="<?= $block->escapeHtmlAttr($block->getItem()->getId()); ?>" class="btn-move action move">
+    <span><?= $block->escapeHtml(__('Move')) ?></span>
+</a>

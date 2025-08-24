@@ -1,0 +1,24 @@
+.multiple-wishlist-modal-popup .modal-inner-wrap {
+    max-width: 620px;
+    width: 90%;
+}
+
+.multiple-wishlist-modal-popup .modal {
+    box-sizing: border-box;
+}
+
+/* small helper: ensure the H1 underline removal is scoped to this modal */
+.multiple-wishlist-modal-popup .modal-title {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ensure the wishlist label and input sizing stay as intended */
+.multiple-wishlist-modal-popup .fieldset-multiple-wishlist .label {
+    text-align: left;
+}
+
+.multiple-wishlist-modal-popup .fieldset-multiple-wishlist input[type="text"] {
+    max-width: 360px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,20 @@
+{
+    "name": "barkamlesh/multiple-wishlist",
+    "description": "Magento 2 multiple wishlist module",
+    "type": "magento2-module",
+    "license":"OSL-3.0",
+    "authors": [
+        {
+            "name": "Kamlesh Bar",
+            "email": "barkamlesh@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kamlesh\\MultipleWishlist\\": ""
+        }
+    }
+}

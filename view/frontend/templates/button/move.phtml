@@ -1,0 +1,9 @@
+<?php
+
+/** @var \Magento\Wishlist\Block\Customer\Wishlist\Button $block */
+?>
+<?php if ($block->getWishlist()->getItemsCount() && $block->getWishlist()->isSalable()): ?>
+    <button type="button" data-role="move" title="<?= $block->escapeHtmlAttr(__('Move Items')); ?>" class="action move-items">
+        <span><?= $block->escapeHtml(__('Move Items')) ?></span>
+    </button>
+<?php endif; ?>
