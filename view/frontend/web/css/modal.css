@@ -25,6 +25,19 @@
 .multiple-wishlist-modal-popup .modal-header { border-bottom: none !important; }
 .multiple-wishlist-modal-popup .modal-title { border-bottom: none !important; }
 
+/* styles for JS fallback markup */
+.multiple-wishlist-modal-popup .multiple-wishlist-label {
+    text-align: left;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.multiple-wishlist-modal-popup .multiple-wishlist-input {
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
 /* ensure the wishlist label and input sizing stay as intended */
 .multiple-wishlist-modal-popup .fieldset-multiple-wishlist .label {
     text-align: left;

@@ -36,24 +36,7 @@ define([
         _create: function() {
             this._prepareElements();
 
-            // Inject scoped CSS once to make this modal slightly narrower without
-            // affecting other modals or global styles. Uses the modalClass set
-            // in options to target only this widget's popup.
-            var styleId = 'kamlesh-multiple-wishlist-modal-style';
-            if (!document.getElementById(styleId)) {
-                try {
-                    var css = '.multiple-wishlist-modal-popup .modal-inner-wrap { max-width: 620px; width: 90%; }\n' +
-                              '.multiple-wishlist-modal-popup .modal { box-sizing: border-box; }';
-                    var styleEl = document.createElement('style');
-                    styleEl.type = 'text/css';
-                    styleEl.id = styleId;
-                    styleEl.appendChild(document.createTextNode(css));
-                    document.getElementsByTagName('head')[0].appendChild(styleEl);
-                } catch (e) {
-                    // Non-fatal: if injecting style fails, continue without blocking modal
-                    console.warn('[MultipleWishlist] Failed to inject scoped modal CSS', e);
-                }
-            }
+            // Scoped modal CSS moved to view/frontend/web/css/modal.css; no runtime injection.
 
             modal(this.options.modalOptions, $(this.element));
         },
@@ -154,10 +137,8 @@ define([
                         console.warn('[MultipleWishlist] UI content missing in modal — appending fallback markup');
                         var fallback = '<fieldset class="fieldset fieldset-multiple-wishlist">' +
                             '<div class="field field-multiple-wishlist">' +
-                            '<div class="label" style="text-align:left; margin-bottom:6px;">' +
-                            'New Wishlist Name' +
-                            '</div>' +
-                            '<input type="text" name="muttiple_wishlist_name" style="width:100%; max-width:360px; box-sizing:border-box;" />' +
+                            '<label class="multiple-wishlist-label">New Wishlist Name</label>' +
+                            '<input class="multiple-wishlist-input" type="text" name="muttiple_wishlist_name" />' +
                             '</div>' +
                             '</fieldset>';
                         multipleWishlistForm.append(fallback);
